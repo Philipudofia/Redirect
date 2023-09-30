@@ -7,6 +7,7 @@ console.log(videoName.value)
 
 fetch("https://recordplus.onrender.com/api/record/videos/?format=json").then(res => res.json().then((data) => {
     let mostRecent = data.length - 1
+    console.log(data)
     if (!videoName.value) {
         videoName.value = data[mostRecent].title
     }

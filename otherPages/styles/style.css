@@ -98,11 +98,13 @@
   color: black;
 }
 
-.container .nav .getStarted h2 {
+.container .nav .getStarted a {
+  text-decoration: none;
+  cursor: pointer;
   color: var(--blue);
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: .7rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -724,5 +726,170 @@
             flex-direction: column;
     padding: .5rem 2.25rem 0.5rem 2.25rem;
   }
+}
+
+.container .privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .privacy h2 {
+  font-family: 'Sora', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.container .privacy button {
+  margin-top: 1.5rem;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 8px;
+  background: #120b48;
+  color: white;
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  font-family: 'Sora', sans-serif;
+}
+
+.container .privacy button:hover {
+  color: var(--blue);
+  background: white;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.container .privacy .createAccount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+}
+
+.container .privacy .createAccount p {
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--blur);
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+}
+
+.container .privacy .createAccount h3 {
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: .5rem;
+  color: var(--blue);
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+}
+
+.container .privacy .createAccount h3:hover {
+  opacity: .8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .privacy {
+    width: 80%;
+  }
+  .container .privacy h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+  }
+  .container .privacy .createAccount {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .privacy .createAccount p {
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--blur);
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+  }
+}
+
+.container .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 4rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 15rem;
+  width: 100%;
+  background: var(--blue);
+  color: white;
+  font-family: 'Sora', sans-serif;
+  padding: 3rem;
+}
+
+.container .footer .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .footer .logo p {
+  margin-left: 1rem;
+  margin-top: 0;
+  opacity: 1;
+}
+
+.container .footer div h1 {
+  font-size: 1rem;
+}
+
+.container .footer div p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  opacity: .6;
+  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */
