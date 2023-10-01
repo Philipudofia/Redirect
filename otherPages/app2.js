@@ -10,7 +10,7 @@ const titleParam = urlParams.get('title')
 console.log(titleParam)
 fetch("https://recordplus.onrender.com/api/record/videos/?format=json").then(res => res.json().then((data) => {
     let recent = data.filter((e)=>e.title ==titleParam)
-    console.log(recent)
+    console.log(recent.value)
     if (!videoName.value) {
         videoName.value = recent.title
     }
