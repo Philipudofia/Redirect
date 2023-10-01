@@ -10,12 +10,12 @@ const titleParam = urlParams.get('title')
 console.log(titleParam)
 fetch("https://recordplus.onrender.com/api/record/videos/?format=json").then(res => res.json().then((data) => {
     let recent = data.filter((e)=>e.title ==titleParam)
-    console.log(recent.value)
+    console.log(recent[0].value)
     if (!videoName.value) {
-        videoName.value = recent.title
+        videoName.value = recent[0].title
     }
-    videoSrc.src = recent.video_file
-    videoUrl.value = recent.video_file
+    videoSrc.src = recent[0].video_file
+    videoUrl.value = recent[0].video_file
 }).catch(err=> console.log("err")))
 
 const copyContent = async () => {
