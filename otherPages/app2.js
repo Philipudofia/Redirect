@@ -16,7 +16,7 @@ fetch("https://recordplus.onrender.com/api/record/videos/?format=json").then(res
     }
     videoSrc.src = recent.video_file
     videoUrl.value = recent.video_file
-}).catch(err=> console.log(err)))
+}).catch(err=> console.log("err")))
 
 const copyContent = async () => {
     try {
