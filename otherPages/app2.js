@@ -4,15 +4,18 @@ const videoUrl = document.getElementById('videoUrl')
 const videoSrc = document.getElementById('videoSrc')
 const copyToClipboard = document.querySelector(".copy")
 console.log(videoName.value)
-
+const titleValue = window.location.search;
+const urlParams = new URLSearchParams(titleValue)
+const titleParam = urlParams.get('title')
+console.log(titleParam)
 fetch("https://recordplus.onrender.com/api/record/videos/?format=json").then(res => res.json().then((data) => {
-    let mostRecent = data.length - 1
-    console.log(data)
+    let recent = data.filter((e)=>e.title.includes(titleParam))
+    console.log(recent)
     if (!videoName.value) {
-        videoName.value = data[mostRecent].title
+        videoName.value = recent.title
     }
-    videoSrc.src = data[mostRecent].video_file
-    videoUrl.value = data[mostRecent].video_file
+    videoSrc.src = recent.video_file
+    videoUrl.value = recent.video_file
 }).catch(err=> console.log(err)))
 
 const copyContent = async () => {
