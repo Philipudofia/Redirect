@@ -8,7 +8,7 @@ const titleValue = window.location.search;
 const urlParams = new URLSearchParams(titleValue)
 const titleParam = urlParams.get('title')
 console.log(titleParam)
-fetch("https://recordplus.onrender.com/api/record/videos/?format=json").then(res => res.json().then((data) => {
+fetch("https://recordplus.onrender.com/api/record/videos/?format=api").then(res => res.json().then((data) => {
     let recent = data.filter((e)=>e.title ==titleParam)
     console.log(recent[0].value)
     if (!videoName.value) {
